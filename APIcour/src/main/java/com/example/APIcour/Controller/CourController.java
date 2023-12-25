@@ -28,8 +28,4 @@ public class CourController {
     public ResponseEntity<?> acheterCour( @PathVariable String COURSid,@PathVariable String Userid){
         return this.courService.acheterCour(COURSid,Userid);
     }
-    @GetMapping("/hello")
-    public String heli(){
-        return "hola";
-    }
 }
