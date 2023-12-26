@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @EntityScan
@@ -25,8 +26,10 @@ public class Cour {
     private String descriptionCour;
 
     private Evaluation evaluation;
-    private List<String> ListIdEtudiants;
+    private ArrayList ListIdEtudiants;
     private String idEnseignant;
-
+    public void setListIdEtudiants(List<String> listIdEtudiants) {
+        this.ListIdEtudiants = (ArrayList) listIdEtudiants;
+    }
 
 }

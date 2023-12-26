@@ -16,9 +16,9 @@ public class CourController {
     public ResponseEntity<?> ajouterCour(@RequestBody Cour cour){
         return courService.save(cour);
     }
-    @PutMapping("/updateCour")
-    public ResponseEntity<?> updateCour(@RequestBody Cour cour){
-        return courService.save(cour);
+    @PutMapping("/updateCour/{id}")
+    public ResponseEntity<?> updateCour(@RequestBody Cour cour,@PathVariable String id){
+        return courService.update(cour,id);
     }
     @DeleteMapping("/deleteCour/{id}")
     public ResponseEntity<?> deleteCour(@PathVariable String id ){
